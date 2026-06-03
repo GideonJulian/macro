@@ -1,19 +1,19 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-} from 'react-native';
-import { colors, globalStyles } from '@/styles/global';
+} from "react-native";
+import { colors, globalStyles } from "@/styles/global";
 
 export default function AddMealScreen() {
-  const [name, setName] = useState('');
-  const [calories, setCalories] = useState('');
-  const [protein, setProtein] = useState('');
-  const [carbs, setCarbs] = useState('');
-  const [fat, setFat] = useState('');
+  const [name, setName] = useState("");
+  const [calories, setCalories] = useState("");
+  const [protein, setProtein] = useState("");
+  const [carbs, setCarbs] = useState("");
+  const [fat, setFat] = useState("");
 
   const handleAddMeal = () => {
     console.log({ name, calories, protein, carbs, fat });
@@ -25,7 +25,7 @@ export default function AddMealScreen() {
 
       <TextInput
         style={styles.input}
-        placeholder='Meal name'
+        placeholder="Meal name"
         placeholderTextColor={colors.textSecondary}
         value={name}
         onChangeText={setName}
@@ -33,9 +33,9 @@ export default function AddMealScreen() {
 
       <TextInput
         style={styles.input}
-        placeholder='Calories'
+        placeholder="Calories"
         placeholderTextColor={colors.textSecondary}
-        keyboardType='numeric'
+        keyboardType="numeric"
         value={calories}
         onChangeText={setCalories}
       />
@@ -43,25 +43,25 @@ export default function AddMealScreen() {
       <View style={styles.row}>
         <TextInput
           style={[styles.input, styles.rowInput]}
-          placeholder='Protein (g)'
+          placeholder="Protein (g)"
           placeholderTextColor={colors.textSecondary}
-          keyboardType='numeric'
+          keyboardType="numeric"
           value={protein}
           onChangeText={setProtein}
         />
         <TextInput
           style={[styles.input, styles.rowInput]}
-          placeholder='Carbs (g)'
+          placeholder="Carbs (g)"
           placeholderTextColor={colors.textSecondary}
-          keyboardType='numeric'
+          keyboardType="numeric"
           value={carbs}
           onChangeText={setCarbs}
         />
         <TextInput
           style={[styles.input, styles.rowInput]}
-          placeholder='Fat (g)'
+          placeholder="Fat (g)"
           placeholderTextColor={colors.textSecondary}
-          keyboardType='numeric'
+          keyboardType="numeric"
           value={fat}
           onChangeText={setFat}
         />
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: "row",
     gap: 10,
   },
   rowInput: {
@@ -94,12 +94,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     padding: 16,
     borderRadius: 10,
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 24,
   },
   buttonText: {
     color: colors.background,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
